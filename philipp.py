@@ -20,3 +20,4 @@ async def change(ctx):
 	await ctx.send(f"Чё ты хочешь {author.mention}? Заебал")
 
 token = os.environ.get('BOT_TOKEN')
+Phil.run(token)
