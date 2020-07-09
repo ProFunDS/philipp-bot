@@ -4,6 +4,7 @@ from discord.ext.commands import Bot
 import os
 
 Phil = commands.Bot(command_prefix= "!")
+Phil.remove_command('help')
 
 @Phil.event
 async def on_member_join(member):
