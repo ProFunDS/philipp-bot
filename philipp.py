@@ -60,4 +60,4 @@ async def help(ctx):
 	await ctx.send(f"Никто тебе не поможет, {author.mention}")
 
 token = os.environ.get('BOT_TOKEN')
-Phil.run(str('token'))
+Phil.run(str(token))
