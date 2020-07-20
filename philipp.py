@@ -23,7 +23,7 @@ async def admin(ctx):
 	await ctx.send(f'**#4708 Эльдар** :fleur_de_lis: \n**#5665 Филя** <:morgana:722944166262472734> \n**#0641 Тёма <:kayn:723183895100653638> ** \n**#1952 Даня** <:jinx:722932714977886298>')  
 
 @Phil.command(pass_context=True)
-async def change(ctx, lane: str = None):
+async def choose(ctx, lane: str = None):
 	author = ctx.message.author
 	if lane is None:
 		champion = random.choice(mylist.champions)
@@ -58,7 +58,7 @@ async def change(ctx, lane: str = None):
 		await ctx.send(f'{emoji} {author.mention}, возьми **{bt}** {emoj}')
 	elif lane == 'sup' or lane == 'support':
 		sp = random.choice(mylist.support)
-		emoji = random.choice(mylist.mojis)
+		emoji = random.choice(mylist.emojis)
 		emoj = random.choice(mylist.emojis)
 		await ctx.message.delete()
 		await ctx.send(f'{emoji} {author.mention}, возьми **{sp}** {emoj}')
@@ -71,6 +71,13 @@ async def help(ctx):
 	author = ctx.message.author
 	await ctx.send(f"Никто тебе не поможет, {author.mention}")
 
-# не забудь сделать рандомный ник через random и nick
+@Phil.command(pass_context=True)
+async def random_nick(ctx):
+    first = random.choice(mylist.first_half)
+    second = random.choice(mylist.second_half)
+    await ctx.message.delete()
+    await ctx.message.author.edit(nick=(first) + " " + (second))
+    await ctx.send(f'**<:fiora:723182306432647270> Ваш никнейм успешно изменён, {ctx.message.author.mention}**')
+
 token = os.environ.get('BOT_TOKEN')
 Phil.run(str(token))
