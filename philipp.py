@@ -20,7 +20,7 @@ async def on_member_join(member):
 
 @Phil.command(aliases = ['admins'])
 async def admin(ctx):
-	await ctx.send(f'**#4708 Эльдар** :fleur_de_lis: \n**#5665 Филя** <:morgana:722944166262472734> \n**#0641 Тёма <:kayn:723183895100653638> ** \n**#1952 Даня** <:jinx:722932714977886298> \n**#6994 Аня** <:annya:736657198427537448> \n**#5158 Ералхан** <:draven_think:739115745832730696>')  
+	await ctx.send(f'**#4708 Эльдар** :fleur_de_lis: \n**#5665 Филя** <:morgana:722944166262472734> \n**#0641 Тёма** <:xayah:723194132209729566> \n**#1952 Даня** <:jinx:722932714977886298> \n**#6994 Аня** <:annya:736657198427537448> \n**#5158 Ералхан** <:draven_think:739115745832730696>')  
 
 @Phil.command(pass_context=True)
 async def choose(ctx, lane: str = None):
