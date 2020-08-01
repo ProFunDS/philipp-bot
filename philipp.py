@@ -13,8 +13,6 @@ Phil.remove_command('help')
 async def on_ready():
 	print ('Всё заебись!')
 
-cinema = discord.VoiceChannel.id(736771409606475780)
-
 @Phil.event
 async def on_member_join(member):
 	add_start_role = discord.utils.get(member.guild.roles, id = 730771639788371968)
