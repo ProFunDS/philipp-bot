@@ -13,6 +13,8 @@ Phil.remove_command('help')
 async def on_ready():
 	print ('Всё заебись!')
 
+cinema = discord.VoiceChannel.id(736771409606475780)
+
 @Phil.event
 async def on_member_join(member):
 	add_start_role = discord.utils.get(member.guild.roles, id = 730771639788371968)
@@ -20,7 +22,7 @@ async def on_member_join(member):
 
 @Phil.command(aliases = ['admins'])
 async def admin(ctx):
-	await ctx.send(f'**#4708 Эльдар** :fleur_de_lis: \n**#5665 Филя** <:morgana:722944166262472734> \n**#0641 Тёма <:kayn:723183895100653638> ** \n**#1952 Даня** <:jinx:722932714977886298>')  
+	await ctx.send(f'**#4708 Эльдар** :fleur_de_lis: \n**#5665 Филя** <:morgana:722944166262472734> \n**#0641 Тёма <:kayn:723183895100653638> ** \n**#1952 Даня** <:jinx:722932714977886298> \n**#6994 Аня** <:annya:736657198427537448> \n**#5158 Ералхан** <:draven_think:739115745832730696>')  
 
 @Phil.command(pass_context=True)
 async def choose(ctx, lane: str = None):
@@ -69,7 +71,7 @@ async def choose(ctx, lane: str = None):
 @Phil.command(pass_context=True) 
 async def help(ctx):
 	author = ctx.message.author
-	await ctx.send(f"Никто тебе не поможет, {author.mention}")
+	await ctx.send(f"Никто тебе не поможет, {author.mention} :axe:")
 
 @Phil.command(pass_context=True)
 async def random_nick(ctx):
